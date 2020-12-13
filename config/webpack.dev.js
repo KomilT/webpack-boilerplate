@@ -19,13 +19,10 @@ module.exports = merge(CommonWebpackConfig, {
   },
 
   devServer: {
-    before(app, server) {
-      // eslint-disable-next-line no-underscore-dangle
-      server._watch(`./src/**/*.html`);
-    },
-
-    contentBase: paths.src,
+    contentBase: [paths.views.cacheDir],
+    watchContentBase: true,
     hot: true,
+    open: true,
     port: 9000,
   },
 
