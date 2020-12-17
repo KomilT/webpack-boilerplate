@@ -19,7 +19,8 @@ module.exports = merge(CommonWebpackConfig, {
   },
 
   devServer: {
-    contentBase: [paths.views.cacheDir],
+    contentBase: [paths.assets.assetsDir, paths.views.cacheDir],
+    contentBasePublicPath: ["/assets", "/"],
     watchContentBase: true,
     hot: true,
     open: true,
