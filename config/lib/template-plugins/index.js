@@ -36,7 +36,11 @@ exports.generateTemplatePlugins = () => {
       output: path.join(cacheDir, "[name].html"),
       data,
 
-      partials: [path.join(process.cwd(), "src", "views", "layout", "*.hbs")],
+      // Watch for partials
+      partials: [
+        path.join(paths.views.layoutDir, "*.hbs"),
+        path.join(paths.views.partialsDir, "*.hbs"),
+      ],
 
       onBeforeSetup: (Handlebars) => {
         // Register helpers
