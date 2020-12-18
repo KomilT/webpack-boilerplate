@@ -1,6 +1,6 @@
 const path = require("path");
 
-exports.root = path.join(__dirname, "../../");
+exports.root = path.join(__dirname, "../");
 
 exports.dist = path.join(exports.root, "dist");
 exports.lib = path.join(exports.root, "lib");

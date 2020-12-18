@@ -2,8 +2,8 @@ const { ProgressPlugin } = require("webpack");
 const ESLintPlugin = require("eslint-webpack-plugin");
 const StylelintPlugin = require("stylelint-webpack-plugin");
 const SVGSpritemapPlugin = require("svg-spritemap-webpack-plugin");
-const paths = require("./helpers/paths");
-const { generateTemplatePlugins } = require("./lib/template-plugins");
+const { generateTemplatePlugins } = require("../lib/template-plugins");
+const paths = require("./paths");
 
 const templatePlugins = generateTemplatePlugins();
 

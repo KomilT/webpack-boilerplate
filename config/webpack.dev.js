@@ -1,5 +1,5 @@
 const { merge } = require("webpack-merge");
-const paths = require("./helpers/paths");
+const paths = require("./paths");
 const CommonWebpackConfig = require("./webpack.common");
 
 module.exports = merge(CommonWebpackConfig, {
