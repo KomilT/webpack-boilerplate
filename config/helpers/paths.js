@@ -1,8 +1,9 @@
 const path = require("path");
 
-exports.root = process.cwd();
+exports.root = path.join(__dirname, "../../");
 
 exports.dist = path.join(exports.root, "dist");
+exports.lib = path.join(exports.root, "lib");
 exports.src = path.join(exports.root, "src");
 
 exports.assets = {

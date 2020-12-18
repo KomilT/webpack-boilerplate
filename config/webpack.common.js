@@ -31,9 +31,12 @@ module.exports = {
 
   resolve: {
     alias: {
-      "@root": paths.root,
+      "@lib": paths.lib,
       "@assets": paths.assets.assetsDir,
       "@": paths.src,
+    },
+    fallback: {
+      path: require.resolve("path-browserify"),
     },
   },
 

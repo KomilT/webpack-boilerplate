@@ -15,13 +15,16 @@ module.exports = merge(CommonWebpackConfig, {
         test: /\.s[ac]ss$/i,
         use: ["style-loader", "css-loader", "sass-loader"],
       },
+      {
+        test: /\.html$/i,
+        loader: "raw-loader",
+      },
     ],
   },
 
   devServer: {
     contentBase: [paths.assets.assetsDir, paths.views.cacheDir],
     contentBasePublicPath: ["/assets", "/"],
-    watchContentBase: true,
     hot: true,
     open: true,
     port: 9000,
