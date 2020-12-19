@@ -1,6 +1,23 @@
 # 📦 webpack boilerplate
 
-Sensible webpack 5 boilerplate using Babel, PostCSS and Sass with a hot dev server and an optimized production build.
+[![License](https://img.shields.io/github/license/KomilT/webpack-boilerplate)](https://github.com/KomilT/webpack-boilerplate/blob/master/LICENSE)
+
+This boilerplate will help you write modular and modern JavaScript code, CSS and automatic reload the browser on code changes.
+
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+
+## Features
+
+- webpack 5;
+- dev server;
+- Babel (polyfills included);
+- Handlebars;
+- Sass/SCSS;
+- PostCSS;
+- ESLint, stylelint, Prettier.
 
 ## Installation
 
@@ -25,3 +42,7 @@ You can view the development server at `localhost:9000`.
 ```bash
 npm run build
 ```
+
+## License
+
+This project is open source and available under the [MIT License](https://github.com/KomilT/webpack-boilerplate/blob/master/LICENSE).
