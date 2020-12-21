@@ -7,6 +7,7 @@ module.exports = merge(CommonWebpackConfig, {
 
   output: {
     filename: "js/[name].js",
+    pathinfo: false,
   },
 
   module: {
@@ -30,5 +31,5 @@ module.exports = merge(CommonWebpackConfig, {
     port: 9000,
   },
 
-  devtool: "inline-source-map",
+  devtool: "eval-cheap-module-source-map",
 });

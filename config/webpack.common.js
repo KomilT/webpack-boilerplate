@@ -1,4 +1,3 @@
-const { ProgressPlugin } = require("webpack");
 const ESLintPlugin = require("eslint-webpack-plugin");
 const StylelintPlugin = require("stylelint-webpack-plugin");
 const SVGSpritemapPlugin = require("svg-spritemap-webpack-plugin");
@@ -41,7 +40,6 @@ module.exports = {
   },
 
   plugins: [
-    new ProgressPlugin(),
     new ESLintPlugin(),
     new StylelintPlugin(),
 

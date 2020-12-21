@@ -1,3 +1,4 @@
+const { ProgressPlugin } = require("webpack");
 const { merge } = require("webpack-merge");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
@@ -49,6 +50,8 @@ module.exports = merge(CommonWebpackConfig, {
   },
 
   plugins: [
+    new ProgressPlugin(),
+
     new CleanWebpackPlugin({
       cleanAfterEveryBuildPatterns: ["**/*.txt", paths.views.cacheDir],
     }),
