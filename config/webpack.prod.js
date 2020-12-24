@@ -26,7 +26,7 @@ module.exports = merge(CommonWebpackConfig, {
         },
       },
       {
-        test: /\.s[ac]ss$/i,
+        test: /\.(sa|sc|c)ss$/i,
         use: [
           MiniCssExtractPlugin.loader,
           "css-loader",
