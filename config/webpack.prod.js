@@ -5,7 +5,6 @@ const CopyPlugin = require("copy-webpack-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const paths = require("./paths");
 const CommonWebpackConfig = require("./webpack.common");
 
 module.exports = merge(CommonWebpackConfig, {
@@ -53,7 +52,7 @@ module.exports = merge(CommonWebpackConfig, {
     new ProgressPlugin(),
 
     new CleanWebpackPlugin({
-      cleanAfterEveryBuildPatterns: ["**/*.txt", paths.views.cacheDir],
+      cleanAfterEveryBuildPatterns: ["**/*.txt"],
     }),
 
     new MiniCssExtractPlugin({
