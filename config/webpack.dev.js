@@ -28,6 +28,7 @@ module.exports = merge(CommonWebpackConfig, {
     contentBasePublicPath: ["/assets", "/"],
     hot: true,
     open: true,
+    overlay: true,
     port: 9000,
   },
 
