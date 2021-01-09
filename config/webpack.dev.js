@@ -1,6 +1,9 @@
 const { merge } = require("webpack-merge");
+const portFinderSync = require("portfinder-sync");
 const paths = require("./paths");
 const CommonWebpackConfig = require("./webpack.common");
+
+const basePort = 8080;
 
 module.exports = merge(CommonWebpackConfig, {
   mode: "development",
@@ -29,7 +32,7 @@ module.exports = merge(CommonWebpackConfig, {
     hot: true,
     open: true,
     overlay: true,
-    port: 9000,
+    port: portFinderSync.getPort(basePort),
   },
 
   devtool: "eval-cheap-module-source-map",
