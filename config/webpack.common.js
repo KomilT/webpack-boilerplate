@@ -1,6 +1,6 @@
 const ESLintPlugin = require("eslint-webpack-plugin");
 const StylelintPlugin = require("stylelint-webpack-plugin");
-const SVGSpritemapPlugin = require("svg-spritemap-webpack-plugin");
+const SpriteLoaderPlugin = require("svg-sprite-loader/plugin");
 const { generateTemplatePlugins } = require("../lib/template-plugins");
 const paths = require("./paths");
 
@@ -12,17 +12,35 @@ module.exports = {
 
   output: {
     path: paths.dist,
+    publicPath: "",
   },
 
   module: {
     rules: [
       {
-        test: /\.(jpe?g|png|gif|svg|woff2?)$/i,
+        // images
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        exclude: paths.assets.iconsDir,
         loader: "file-loader",
         options: {
-          emitFile: false,
           name: "[path][name].[ext]",
-          publicPath: "/",
+        },
+      },
+      {
+        // svg sprite
+        test: /\.svg$/i,
+        include: paths.assets.iconsDir,
+        loader: "svg-sprite-loader",
+        options: {
+          outputPath: "",
+        },
+      },
+      {
+        // fonts
+        test: /\.woff2?$/i,
+        loader: "file-loader",
+        options: {
+          name: "[path][name].[ext]",
         },
       },
     ],
@@ -42,15 +60,6 @@ module.exports = {
   plugins: [
     new ESLintPlugin(),
     new StylelintPlugin(),
-
-    new SVGSpritemapPlugin("src/assets/icons/**/*.svg", {
-      output: {
-        filename: "assets/icons.svg",
-        svg4everybody: true,
-      },
-      sprite: {
-        prefix: false,
-      },
-    }),
+    new SpriteLoaderPlugin(),
   ].concat(templatePlugins),
 };

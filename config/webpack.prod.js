@@ -1,7 +1,6 @@
 const { ProgressPlugin } = require("webpack");
 const { merge } = require("webpack-merge");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const CopyPlugin = require("copy-webpack-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -61,21 +60,8 @@ module.exports = merge(CommonWebpackConfig, {
 
     new ImageMinimizerPlugin({
       minimizerOptions: {
-        plugins: [["mozjpeg"], ["pngquant"], ["gifsicle"]],
+        plugins: [["mozjpeg"], ["pngquant"], ["gifsicle"], ["svgo"]],
       },
-    }),
-
-    new CopyPlugin({
-      patterns: [
-        {
-          from: "assets",
-          to: "assets",
-          globOptions: {
-            ignore: ["**/icons", "**/.gitkeep"],
-          },
-          noErrorOnMissing: true,
-        },
-      ],
     }),
   ],
 

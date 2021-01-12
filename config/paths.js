@@ -8,6 +8,7 @@ exports.src = path.join(exports.root, "src");
 
 exports.assets = {
   assetsDir: path.join(exports.src, "assets"),
+  iconsDir: path.join(exports.src, "assets", "icons"),
 };
 
 exports.views = {
