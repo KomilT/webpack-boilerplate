@@ -26,7 +26,12 @@ module.exports = merge(CommonWebpackConfig, {
       {
         test: /\.(sa|sc|c)ss$/i,
         use: [
-          MiniCssExtractPlugin.loader,
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: "../",
+            },
+          },
           "css-loader",
           {
             loader: "postcss-loader",

@@ -19,10 +19,6 @@ module.exports = merge(CommonWebpackConfig, {
         test: /\.(sa|sc|c)ss$/i,
         use: ["style-loader", "css-loader", "sass-loader"],
       },
-      {
-        test: /\.html$/i,
-        loader: "raw-loader",
-      },
     ],
   },
 

@@ -43,6 +43,15 @@ module.exports = {
           name: "[path][name].[ext]",
         },
       },
+      {
+        test: /\.html$/i,
+        loader: "html-loader",
+        options: {
+          attributes: {
+            root: paths.src,
+          },
+        },
+      },
     ],
   },
 
