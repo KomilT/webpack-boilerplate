@@ -2,6 +2,7 @@ const ESLintPlugin = require("eslint-webpack-plugin");
 const StylelintPlugin = require("stylelint-webpack-plugin");
 const SpriteLoaderPlugin = require("svg-sprite-loader/plugin");
 const { generateTemplatePlugins } = require("../lib/template-plugins");
+const alias = require("./alias");
 const paths = require("./paths");
 
 const templatePlugins = generateTemplatePlugins();
@@ -56,14 +57,7 @@ module.exports = {
   },
 
   resolve: {
-    alias: {
-      "@lib": paths.lib,
-      "@assets": paths.assets.assetsDir,
-      "@": paths.src,
-    },
-    fallback: {
-      path: require.resolve("path-browserify"),
-    },
+    alias: alias.obj,
   },
 
   plugins: [
