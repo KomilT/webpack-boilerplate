@@ -13,7 +13,7 @@ exports.assets = {
 
 exports.views = {
   viewsDir: path.join(exports.src, "views"),
-  cacheDir: path.join(exports.src, "views", "cache"),
+  cacheDir: path.join(exports.src, "views", ".cache"),
   layoutDir: path.join(exports.src, "views", "layout"),
   partialsDir: path.join(exports.src, "views", "partials"),
 };

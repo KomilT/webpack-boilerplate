@@ -2,4 +2,4 @@
 node_modules
 
 dist
-src/views/cache
+src/views/.cache

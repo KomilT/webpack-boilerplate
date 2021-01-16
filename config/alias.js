@@ -4,7 +4,6 @@ const paths = require("./paths");
 module.exports = {
   _alias: {
     "@lib": paths.lib,
-    "@assets": paths.assets.assetsDir,
     "@": paths.src,
   },
 
