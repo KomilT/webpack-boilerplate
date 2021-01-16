@@ -4,9 +4,9 @@
   "description": "",
   "private": true,
   "scripts": {
-    "postinstall": "npm run start",
     "start": "cross-env NODE_ENV=development webpack serve --config config/webpack.dev.js",
     "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js",
+    "postinstall": "npm run start",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
