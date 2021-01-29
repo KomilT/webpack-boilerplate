@@ -1,48 +1,77 @@
-# 📦 webpack boilerplate
+# webpack-boilerplate
 
-[![License](https://img.shields.io/github/license/KomilT/webpack-boilerplate)](https://github.com/KomilT/webpack-boilerplate/blob/master/LICENSE)
+[![License](https://img.shields.io/github/license/KomilT/webpack-boilerplate?color=blue)](https://github.com/KomilT/webpack-boilerplate/blob/master/LICENSE)
 
-This boilerplate will help you write modular and modern JavaScript code, CSS and automatic reload the browser on code changes.
+An Awesome Webpack Boilerplate To Jumpstart Your Projects.
+
+## Content
 
 - [Features](#features)
-- [Installation](#installation)
+- [Getting Started](#getting-started)
+  - [Installation](#installation)
 - [Usage](#usage)
+  - [Development server](#development-server)
+  - [Build](#build)
+  - [Deploy](#deploy)
 - [License](#license)
 
 ## Features
 
 - webpack 5;
-- dev server;
+- Development server;
 - Babel (polyfills included);
 - Handlebars;
 - Sass/SCSS;
 - PostCSS;
-- ESLint, stylelint, Prettier.
+- ESLint, stylelint, Prettier;
+- Deployment system;
+- and much more.
 
-## Installation
+## Getting Started
 
-Clone this repo and npm install.
+### Installation
 
-```bash
-npm i
+1. Clone the repo:
+
+```sh
+git clone https://github.com/KomilT/webpack-boilerplate.git
+```
+
+2. Go to the project folder:
+
+```sh
+cd webpack-boilerplate
+```
+
+3. Install NPM packages:
+
+```sh
+npm install
 ```
 
 ## Usage
 
-### Development server
+### Development server:
 
-```bash
+```sh
 npm start
 ```
 
-You can view the development server at `localhost:9000`.
+### Build:
 
-### Production build
-
-```bash
+```sh
 npm run build
 ```
 
+### Deploy:
+
+```sh
+npm run deploy
+```
+
+_(by default on GitHub Pages)._
+
 ## License
 
-This project is open source and available under the [MIT License](https://github.com/KomilT/webpack-boilerplate/blob/master/LICENSE).
+Copyright © [KomilT](https://github.com/KomilT).<br>
+This project is [MIT](https://github.com/KomilT/webpack-boilerplate/blob/master/LICENSE) licensed.
