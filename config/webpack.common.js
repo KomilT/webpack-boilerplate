@@ -1,3 +1,4 @@
+const CopyPlugin = require("copy-webpack-plugin");
 const ESLintPlugin = require("eslint-webpack-plugin");
 const StylelintPlugin = require("stylelint-webpack-plugin");
 const SpriteLoaderPlugin = require("svg-sprite-loader/plugin");
@@ -64,5 +65,16 @@ module.exports = {
     new ESLintPlugin(),
     new StylelintPlugin(),
     new SpriteLoaderPlugin(),
+
+    new CopyPlugin({
+      patterns: [
+        {
+          from: "assets/favicon",
+          globOptions: {
+            ignore: ["**/.gitkeep"],
+          },
+        },
+      ],
+    }),
   ].concat(templatePlugins),
 };
