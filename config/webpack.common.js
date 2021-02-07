@@ -38,14 +38,6 @@ module.exports = {
         },
       },
       {
-        // fonts
-        test: /\.woff2?$/i,
-        loader: "file-loader",
-        options: {
-          name: "[path][name].[ext]",
-        },
-      },
-      {
         test: /\.html$/i,
         loader: "html-loader",
         options: {
