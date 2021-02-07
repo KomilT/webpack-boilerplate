@@ -73,6 +73,7 @@ module.exports = {
           globOptions: {
             ignore: ["**/.gitkeep"],
           },
+          noErrorOnMissing: true,
         },
       ],
     }),
