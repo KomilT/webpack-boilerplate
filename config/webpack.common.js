@@ -3,7 +3,6 @@ const ESLintPlugin = require("eslint-webpack-plugin");
 const StylelintPlugin = require("stylelint-webpack-plugin");
 const SpriteLoaderPlugin = require("svg-sprite-loader/plugin");
 const { generateTemplatePlugins } = require("../lib/template-plugins");
-const alias = require("./alias");
 const paths = require("./paths");
 
 const templatePlugins = generateTemplatePlugins();
@@ -22,7 +21,7 @@ module.exports = {
       {
         // images
         test: /\.(jpe?g|png|gif|svg)$/i,
-        exclude: paths.assets.iconsDir,
+        exclude: paths.icons,
         loader: "file-loader",
         options: {
           name: "[path][name].[ext]",
@@ -31,7 +30,7 @@ module.exports = {
       {
         // svg sprite
         test: /\.svg$/i,
-        include: paths.assets.iconsDir,
+        include: paths.icons,
         loader: "svg-sprite-loader",
         options: {
           outputPath: "",
@@ -50,7 +49,9 @@ module.exports = {
   },
 
   resolve: {
-    alias: alias.obj,
+    alias: {
+      "@lib": paths.lib,
+    },
   },
 
   plugins: [

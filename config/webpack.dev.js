@@ -23,7 +23,7 @@ module.exports = merge(CommonWebpackConfig, {
   },
 
   devServer: {
-    contentBase: [paths.assets.assetsDir, paths.views.cacheDir],
+    contentBase: [paths.assets, paths.cache],
     contentBasePublicPath: ["/assets", "/"],
     hot: true,
     open: true,

@@ -1,19 +1,27 @@
 const path = require("path");
 
-exports.root = path.join(__dirname, "../");
+const root = path.join(__dirname, "../");
+const dist = path.join(root, "dist");
+const lib = path.join(root, "lib");
+const src = path.join(root, "src");
 
-exports.dist = path.join(exports.root, "dist");
-exports.lib = path.join(exports.root, "lib");
-exports.src = path.join(exports.root, "src");
+const assets = path.join(src, "assets");
+const icons = path.join(assets, "icons");
 
-exports.assets = {
-  assetsDir: path.join(exports.src, "assets"),
-  iconsDir: path.join(exports.src, "assets", "icons"),
-};
+const views = path.join(src, "views");
+const cache = path.join(views, ".cache");
+const layout = path.join(views, "layout");
+const partials = path.join(views, "partials");
 
-exports.views = {
-  viewsDir: path.join(exports.src, "views"),
-  cacheDir: path.join(exports.src, "views", ".cache"),
-  layoutDir: path.join(exports.src, "views", "layout"),
-  partialsDir: path.join(exports.src, "views", "partials"),
+module.exports = {
+  root,
+  dist,
+  lib,
+  src,
+  assets,
+  icons,
+  views,
+  cache,
+  layout,
+  partials,
 };

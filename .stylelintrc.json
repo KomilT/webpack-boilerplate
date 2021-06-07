@@ -9,8 +9,8 @@
       "custom-properties",
       "dollar-variables",
       "declarations",
-      "at-rules",
-      "rules"
+      "rules",
+      "at-rules"
     ]
   }
 }

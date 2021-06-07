@@ -1,18 +1,13 @@
 {
   "name": "webpack-boilerplate",
   "version": "1.0.0",
-  "description": "",
   "private": true,
-  "scripts": {
-    "start": "cross-env NODE_ENV=development webpack serve --config config/webpack.dev.js",
-    "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js",
-    "postinstall": "npm run start",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "core-js": "^3.8.0",
+    "regenerator-runtime": "^0.13.7",
+    "sass-rem": "^2.0.1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@babel/preset-env": "^7.12.7",
@@ -58,9 +53,11 @@
     "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^5.4.0"
   },
-  "dependencies": {
-    "bootstrap": "^4.5.3",
-    "core-js": "^3.8.0",
-    "regenerator-runtime": "^0.13.7"
+  "scripts": {
+    "start": "cross-env NODE_ENV=development webpack serve --config config/webpack.dev.js",
+    "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js",
+    "postinstall": "npm run start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   }
 }
